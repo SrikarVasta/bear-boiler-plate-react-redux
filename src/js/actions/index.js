@@ -42,6 +42,7 @@ export const addBears = (bear) => {
                     type: 'CREATE_BEARS_FULLFILLED',
                     payload: response.data
                 })
+                dispatch(fetchBear())
             })
             .catch(err => {
                 dispatch({
@@ -68,6 +69,7 @@ export const updateBears = (bear) => {
                     type: 'UPDATE_BEARS_FULLFILLED',
                     payload: response.data
                 })
+                dispatch(fetchBear())
             })
             .catch(err => {
                 dispatch({
@@ -88,6 +90,7 @@ export const deleteBears = (bear) => {
                     type: 'DELETE_BEARS_FULLFILLED',
                     payload: response.data
                 })
+                dispatch(fetchBear())
             })
             .catch(err => {
                 dispatch({
